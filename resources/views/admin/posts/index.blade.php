@@ -16,6 +16,7 @@
                         <th scope="col">Content</th>
                         <th scope="col">Slug</th>
                         <th scope="col">Category</th>
+                        <th scope="col">Tags</th>
                         <th scope="col">Options</th>
                     </tr>
                     </thead>
@@ -30,7 +31,7 @@
                                         <td> None </td>
                                     @else
                                         <td>{{$post->category->category_name}}</td>
-                                    @endif    
+                                    @endif  
                                 <td class="d-flex">    
                                     <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary m-2">View</a>
                                     <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-secondary m-2">Edit</a>

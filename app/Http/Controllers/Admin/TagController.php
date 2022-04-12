@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,7 +16,7 @@ class TagController extends Controller
     public function index()
     {
         $tags = Tag::all();
-        return view('admin.tag.index', compact('tags'));
+        return view('admin.tags.index', compact('tags'));
     }
 
     /**
@@ -48,7 +48,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        return view('admin.tag.show', compact('tag'));
+        return view('admin.tags.show', compact('tag'));
     }
 
     /**

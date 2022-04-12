@@ -19,9 +19,18 @@
                 @else
                     <li class="list-group-item">Category: {{$post->category->category_name}}</li>
                 @endif
+                <li class="list-group-item">Tags: </li>
+                </ul>
+                <ul>
+                    @foreach ($post->tags as $tag)
+                        <li>
+                            <a href="{{route('admin.tags.show', $tag->id)}}">{{$tag->tag_name}}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <a type="button" class="btn btn-primary" href="{{route('admin.posts.index')}}" role="button">Go Back</a>
+            <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-secondary m-2">Edit</a>
     </div>
 
 @endsection
