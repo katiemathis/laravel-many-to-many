@@ -34,3 +34,4 @@ class CreatePostTagTable extends Migration
         Schema::dropIfExists('post_tag');
     }
 }
+
